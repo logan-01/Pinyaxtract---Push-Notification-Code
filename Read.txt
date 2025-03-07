@@ -1,0 +1,7 @@
+npx nodemon --exec ts-node src/index.ts
+
+
+Back-end Token Collection Process
+
+Collect Token 
+Filter Token for Duplication

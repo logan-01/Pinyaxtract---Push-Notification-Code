@@ -1,0 +1,18 @@
+# Node.js dependencies
+node_modules/
+
+dist/
+
+# debug
+npm-debug.*
+
+# local env files
+.env*.local
+
+.env
+
+# typescript
+*.tsbuildinfo
+
+firebase-server-key.json
+

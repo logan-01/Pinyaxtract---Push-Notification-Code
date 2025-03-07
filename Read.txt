@@ -1,6 +1,10 @@
 npx nodemon --exec ts-node src/index.ts
 
 
+cat serviceAccountKey.json | jq -c
+
+
+
 Back-end Token Collection Process
 
 Collect Token 

@@ -2,6 +2,10 @@ import { Expo, ExpoPushTicket, ExpoPushReceiptId } from "expo-server-sdk";
 import * as admin from "firebase-admin";
 import * as dotenv from "dotenv";
 
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 3000;
+
 // Load environment variables
 dotenv.config();
 
@@ -185,4 +189,12 @@ temperatureRef.on("value", async (snapshot) => {
     await sendPushNotification(normalTempMessage.title, normalTempMessage.body);
     isNormalNotified = true;
   }
+});
+
+// * To Keep FCM Awake
+app.get("/", (req: any, res: any) => {
+  res.send("App is awake!");
+});
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });

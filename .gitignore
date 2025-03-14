@@ -11,6 +11,9 @@ npm-debug.*
 
 .env
 
+trash
+scripts
+
 # typescript
 *.tsbuildinfo
 
